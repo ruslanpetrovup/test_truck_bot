@@ -1,0 +1,25 @@
+.switch {
+  display: flex;
+  border-radius: 0.75rem;
+  background: var(--surface-card);
+  padding: 0.25rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.tab {
+  flex: 1;
+  border-radius: 0.5rem;
+  padding: 0.75rem 1rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: background-color 0.2s, color 0.2s;
+  background: transparent;
+  border: none;
+  color: #9ca3af;
+  cursor: pointer;
+
+  &.active {
+    background: var(--primary);
+    color: #fff;
+  }
+}

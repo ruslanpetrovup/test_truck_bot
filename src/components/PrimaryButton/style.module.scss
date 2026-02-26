@@ -1,0 +1,21 @@
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+
+  background: radial-gradient(
+    79.61% 100% at 50% 0%,
+    #88d5ff 0%,
+    #0098ea 81.76%
+  );
+  border: 2px solid linear-gradient(180deg, rgba(255, 255, 255, 0.24) 0%, rgba(255, 255, 255, 0.0768) 100%);
+  box-shadow: 0px 4px 0px 0px rgba(0, 0, 0, 0.32);
+  border-radius: 12px;
+
+
+}
+
+.icon {
+  flex-shrink: 0;
+}

@@ -1,0 +1,11 @@
+.card {
+  border-radius: 1rem;
+  background: var(--surface-card);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 0.6; }
+  50% { opacity: 1; }
+}

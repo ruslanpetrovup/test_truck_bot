@@ -1,0 +1,143 @@
+.root {
+  padding: 1.5rem 1rem;
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+}
+
+.headerCard {
+  border-radius: 1rem;
+  background: var(--surface-card);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.headerTitle {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.headerDesc {
+  font-size: 0.75rem;
+  color: #9ca3af;
+  margin-top: 0.25rem;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.headerIcon {
+  width: 0.875rem;
+  height: 0.875rem;
+}
+
+.switch {
+  margin-bottom: 1.5rem;
+}
+
+.section {
+  margin-bottom: 1rem;
+}
+
+.label {
+  font-size: 0.875rem;
+  color: #9ca3af;
+  display: block;
+  margin-bottom: 0.25rem;
+}
+
+.balanceRow {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #fff;
+}
+
+.balanceIcon {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.balanceValue {
+  font-variant-numeric: tabular-nums;
+}
+
+.networkLabel {
+  font-size: 0.75rem;
+  color: #6b7280;
+  margin-top: 0.5rem;
+}
+
+.walletCard {
+  margin-top: 0.75rem;
+  border-radius: 0.75rem;
+  background: var(--surface-card);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.walletConnected {
+  font-size: 0.875rem;
+  color: #22c55e;
+}
+
+.connectBtn {
+  border-radius: 0.5rem;
+  background: var(--surface-elevated);
+  padding: 0.625rem 1rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  cursor: pointer;
+}
+
+.starsCard {
+  margin-top: 0.75rem;
+  border-radius: 0.75rem;
+  background: var(--surface-card);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.starsIcon {
+  width: 1.25rem;
+  height: 1.25rem;
+  color: #eab308;
+}
+
+.starsValue {
+  font-size: 1.125rem;
+  font-weight: 500;
+  color: #fff;
+  font-variant-numeric: tabular-nums;
+}
+
+.ctaWrap {
+  margin-top: auto;
+  padding-top: 1.5rem;
+}
+
+.ctaBtn {
+  width: 100%;
+  padding: 1rem;
+  font-size: 1.125rem;
+}
+
+.ctaIcon {
+  width: 1.25rem;
+  height: 1.25rem;
+}

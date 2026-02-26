@@ -1,0 +1,138 @@
+/* Reset default browser styles */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-text-size-adjust: 100%;
+}
+
+
+img,
+picture,
+video,
+canvas {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+svg {
+  display: block;
+  vertical-align: middle;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/* Proxima Nova — файлы в public/fonts/ */
+@font-face {
+  font-family: 'Proxima Nova';
+  src: url('/fonts/ProximaNova-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Proxima Nova';
+  src: url('/fonts/ProximaNova-Bold.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Proxima Nova';
+  src: url('/fonts/ProximaNova-Bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Proxima Nova';
+  src: url('/fonts/ProximaNova-Black.woff') format('woff');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --font-primary: 'Proxima Nova', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --tg-theme-bg-color: #1a1a1e;
+  --tg-theme-button-color: #3b82f6;
+  --tg-theme-button-text-color: #ffffff;
+  --tg-theme-text-color: #ffffff;
+  --tg-theme-hint-color: #9ca3af;
+  --tg-theme-link-color: #3b82f6;
+  --tg-theme-secondary-bg-color: #2d2d33;
+  --surface: #1a1a1e;
+  --surface-card: #2d2d33;
+  --surface-elevated: #36363d;
+  --primary: #3b82f6;
+  --primary-hover: #2563eb;
+  --max-mobile: 420px;
+}
+
+body {
+  min-height: 100dvh;
+  -webkit-font-smoothing: antialiased;
+  background: var(--tg-theme-bg-color);
+  color: var(--tg-theme-text-color);
+  font-family: var(--font-primary);
+}
+
+#root {
+  min-height: 100dvh;
+  max-width: var(--max-mobile);
+  margin: 0 auto;
+  position: relative;
+}
+
+@keyframes shimmer {
+  0% { opacity: 0.4; }
+  50% { opacity: 0.8; }
+  100% { opacity: 0.4; }
+}
+
+.animateShimmer {
+  animation: shimmer 1.5s ease-in-out infinite;
+}

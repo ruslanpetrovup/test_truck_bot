@@ -1,0 +1,225 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 100;
+  animation: fadeIn 0.2s ease-out;
+}
+
+.panel {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  max-width: var(--max-mobile);
+  margin: 0 auto;
+  background: #2d2d33;
+  border-radius: 1rem 1rem 0 0;
+  padding: 0 1rem max(1rem, env(safe-area-inset-bottom));
+  z-index: 101;
+  animation: slideUp 0.3s ease-out;
+}
+
+.handle {
+  width: 2.5rem;
+  height: 0.25rem;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 9999px;
+  margin: 0.5rem auto;
+  flex-shrink: 0;
+}
+
+.topRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.balanceBadge {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.75rem;
+  background: rgba(59, 130, 246, 0.15);
+  border: 1px solid rgba(96, 165, 250, 0.25);
+  box-shadow: -2px 0 8px rgba(59, 130, 246, 0.2);
+}
+
+.balanceIcon {
+  width: 1.25rem;
+  height: 1.25rem;
+  color: #93c5fd;
+  flex-shrink: 0;
+}
+
+.balanceText {
+  display: flex;
+  flex-direction: column;
+  gap: 0.125rem;
+}
+
+.balanceLabel {
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.balanceValue {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #fff;
+  font-variant-numeric: tabular-nums;
+}
+
+.connectBtn {
+  padding: 0.5rem 1rem;
+  border-radius: 0.75rem;
+  background: #fff;
+  color: #000;
+  font-weight: 700;
+  font-size: 0.875rem;
+  border: none;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.actionsRow {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.depositBtn {
+  flex: 1;
+  padding: 0.875rem 1rem;
+  border-radius: 0.75rem;
+  background: var(--primary);
+  color: #fff;
+  font-weight: 600;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.withdrawBtn {
+  flex: 1;
+  padding: 0.875rem 1rem;
+  border-radius: 0.75rem;
+  background: #404040;
+  color: #fff;
+  font-weight: 600;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+}
+
+.actionIcon {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+// Deposit form (step 2)
+.depositForm {
+  padding-bottom: 0.5rem;
+}
+
+.currencyTabs {
+  margin-bottom: 1rem;
+}
+
+.depositLabel {
+  font-size: 0.875rem;
+  color: #9ca3af;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.depositBalanceRow {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.depositInputWrap {
+  background: #1a1a1e;
+  border-radius: 0.75rem;
+  padding: 0.75rem 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.depositInputIcon {
+  width: 1.25rem;
+  height: 1.25rem;
+  color: #93c5fd;
+}
+
+.depositInputIconStar {
+  color: #eab308;
+}
+
+.depositInput {
+  flex: 1;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1.125rem;
+  font-variant-numeric: tabular-nums;
+
+  &::placeholder {
+    color: #6b7280;
+  }
+}
+
+.depositCta {
+  width: 100%;
+  padding: 1rem;
+  border-radius: 0.75rem;
+  background: var(--primary);
+  color: #fff;
+  font-weight: 600;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.backBtn {
+  background: none;
+  border: none;
+  color: #9ca3af;
+  padding: 0.25rem;
+  margin-bottom: 0.5rem;
+  cursor: pointer;
+  font-size: 0.875rem;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { transform: translateY(100%); }
+  to { transform: translateY(0); }
+}

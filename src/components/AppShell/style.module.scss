@@ -1,0 +1,13 @@
+.shell {
+  min-height: 100dvh;
+  max-width: var(--max-mobile);
+  margin: 0 auto;
+  background: var(--surface);
+  display: flex;
+  flex-direction: column;
+}
+
+.main {
+  flex: 1;
+  padding-bottom: 5rem;
+}
