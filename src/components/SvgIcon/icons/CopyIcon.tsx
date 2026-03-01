@@ -2,9 +2,9 @@ import type { SVGProps } from 'react'
 
 export function CopyIcon(props: SVGProps<SVGSVGElement>) {
   return (
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} xmlns="http://www.w3.org/2000/svg" {...props}>
-      <rect x="9" y="9" width="13" height="13" rx="2" ry="2" />
-      <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1" />
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" {...props}>
+    <path d="M18.5479 2H9.4521C7.5488 2 6 3.5488 6 5.4521V6H5.4521C3.5488 6 2 7.5488 2 9.4521V18.5478C2 20.4512 3.5488 22 5.4521 22H14.5478C16.2963 22 17.73 20.6882 17.9542 19H18.5478C20.4512 19 22 17.4512 22 15.5479V5.4521C22 3.5488 20.4512 2 18.5479 2ZM20 15.5479C20 16.3486 19.3486 17 18.5479 17H18V9.4521C18 7.5488 16.4512 6 14.5479 6H8V5.4521C8 4.6514 8.6514 4 9.4521 4H18.5478C19.3486 4 20 4.6514 20 5.4521V15.5479Z" fill="currentColor"/>
     </svg>
+    
   )
 }

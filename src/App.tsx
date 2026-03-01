@@ -3,7 +3,7 @@ import AppShell from '@/components/AppShell'
 import Home from '@/pages/Home'
 import Shop from '@/pages/Shop'
 import TrucksYard from '@/pages/TrucksYard'
-import Yard from '@/pages/Yard'
+import Yard from '@/pages/Referrals'
 import Tasks from '@/pages/Tasks'
 
 export default function App() {

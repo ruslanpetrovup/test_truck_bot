@@ -1,4 +1,4 @@
-import type { User, Product, Task, Friend } from '@/types'
+import type { User, Product, Task, Friend, ReferralLevel } from '@/types'
 
 const delay = (ms: number) => new Promise((r) => setTimeout(r, ms))
 const randomDelay = () => delay(200 + Math.random() * 200)
@@ -16,9 +16,9 @@ const mockProducts: Product[] = [
     imageUrl: 'https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?w=400',
     price: 10880,
     stats: [
-      { label: 'Earn', value: '0.22/H' },
-      { label: 'Energy', value: '0/100' },
-      { label: 'Durability', value: '89/90' },
+      { label: 'Income 24h', value: '0.1224' },
+      { label: 'Total', value: '11.02' },
+      { label: 'Trips', value: '90/90' },
     ],
   },
   {
@@ -73,9 +73,32 @@ const mockTasks: Task[] = [
 ]
 
 const mockFriends: Friend[] = [
-  { id: '1', name: 'Benji', avatarUrl: '', reward: 100 },
-  { id: '2', name: 'Alex', avatarUrl: '', reward: 80 },
-  { id: '3', name: 'Sam', avatarUrl: '', reward: 60 },
+  { id: '1', name: 'Benji', avatarUrl: '/images/avatar-referral.png', reward: 100 },
+  { id: '2', name: 'Alex', avatarUrl: '/images/avatar-referral.png', reward: 80 },
+  { id: '3', name: 'Sam', avatarUrl: '/images/avatar-referral.png', reward: 60 },
+]
+
+const mockReferralLevels: ReferralLevel[] = [
+  {
+    percent: 5,
+    level: 1,
+    referrals: [
+      { id: '1', name: 'Benji', avatarUrl: '/images/avatar-referral.png', reward: 100 },
+      { id: '2', name: 'Benji', avatarUrl: '/images/avatar-referral.png', reward: 100 },
+      { id: '3', name: 'Alex', avatarUrl: '/images/avatar-referral.png', reward: 85 },
+      { id: '4', name: 'Benji', avatarUrl: '/images/avatar-referral.png', reward: 100 },
+      { id: '5', name: 'Sam', avatarUrl: '/images/avatar-referral.png', reward: 120 },
+    ],
+  },
+  {
+    percent: 10,
+    level: 2,
+    referrals: [
+      { id: '6', name: 'Jordan', avatarUrl: '', reward: 200 },
+      { id: '7', name: 'Casey', avatarUrl: '', reward: 180 },
+      { id: '8', name: 'Riley', avatarUrl: '', reward: 250 },
+    ],
+  },
 ]
 
 const mockOwnedTrucks: Product[] = [
@@ -121,6 +144,11 @@ export async function fetchTasks(): Promise<Task[]> {
 export async function fetchInvites(): Promise<Friend[]> {
   await randomDelay()
   return mockFriends
+}
+
+export async function fetchReferralLevels(): Promise<ReferralLevel[]> {
+  await randomDelay()
+  return mockReferralLevels
 }
 
 export async function fetchOwnedTrucks(): Promise<Product[]> {

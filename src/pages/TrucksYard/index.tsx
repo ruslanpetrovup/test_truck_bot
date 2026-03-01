@@ -1,4 +1,4 @@
-import { useNavigate } from 'react-router-dom'
+import { useNavigate, useLocation } from 'react-router-dom'
 import Tabs, { type TabItem } from '@/components/Tabs'
 import ProductCard from '@/components/ProductCard'
 import SkeletonCard from '@/components/SkeletonCard'
@@ -12,15 +12,22 @@ const tabs: TabItem[] = [
 
 export default function TrucksYard() {
   const navigate = useNavigate()
+  const location = useLocation()
   const { data: ownedTrucks, isLoading } = useOwnedTrucks()
 
   const handleTab = (id: string) => {
-    if (id === 'shop') navigate('/trucks/shop')
+    if (id === 'shop') navigate('/trucks/shop', { state: { fromTab: true } })
   }
 
   return (
     <div className={styles.root}>
-      <Tabs tabs={tabs} activeId="yard" onSelect={handleTab} className={styles.tabs} />
+      <Tabs
+        tabs={tabs}
+        activeId="yard"
+        onSelect={handleTab}
+        className={styles.tabs}
+        animateFromOppositeTab={location.state?.fromTab === true}
+      />
       {isLoading ? (
         <div className={styles.list}>
           {[1, 2].map((i) => (

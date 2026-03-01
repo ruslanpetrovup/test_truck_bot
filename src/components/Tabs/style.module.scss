@@ -1,29 +1,37 @@
 .tabs {
+  position: relative;
   display: flex;
-  border-radius: 0.75rem;
-  background: var(--surface-card);
-  padding: 0.25rem;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.indicator {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  border-radius: 12px;
+  background-color: #fff;
+  transition: transform 0.25s ease-out;
+  pointer-events: none;
+  z-index: 0;
 }
 
 .tab {
-  flex: 1;
-  border-radius: 0.5rem;
-  padding: 0.625rem 1rem;
-  font-size: 0.875rem;
-  font-weight: 500;
-  transition: background-color 0.2s, color 0.2s;
-  background: transparent;
+  position: relative;
+  z-index: 1;
   border: none;
-  color: #9ca3af;
-  cursor: pointer;
+  flex: 1;
+  border-radius: 12px;
+  padding: 13px 0;
+  font-size: 21px;
+  font-weight: 600;
 
-  &:hover {
-    color: #fff;
-  }
+  background-color: transparent;
+  color: rgba(255, 255, 255, 0.7);
 
   &.active {
-    background: #fff;
-    color: var(--surface);
+    color: rgba(0, 0, 0, 1);
+    font-weight: 800;
   }
 }

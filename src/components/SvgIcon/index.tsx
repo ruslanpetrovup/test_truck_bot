@@ -14,9 +14,13 @@ import { CheckIcon } from './icons/CheckIcon'
 import { CopyIcon } from './icons/CopyIcon'
 import { StarIcon } from './icons/StarIcon'
 import { MinusIcon } from './icons/MinusIcon'
+import { InfoIcon } from './icons/InfoIcon'
+import { Trips } from './icons/Trips'
+import { ReferralsIcon } from './icons/ReferralsIcon'
 
 const icons = {
   diamond: DiamondIcon,
+  info: InfoIcon,
   plus: PlusIcon,
   user: UserIcon,
   main: MainIcon,
@@ -25,12 +29,14 @@ const icons = {
   users: UsersIcon,
   tasks: TasksIcon,
   ton: TonIcon,
+  trips: Trips,
   wallet: WalletIcon,
   truck: TruckIcon,
   check: CheckIcon,
   copy: CopyIcon,
   star: StarIcon,
   minus: MinusIcon,
+  referrals: ReferralsIcon
 }
 
 export type IconName = keyof typeof icons

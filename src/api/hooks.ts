@@ -4,6 +4,7 @@ import {
   fetchProducts,
   fetchTasks,
   fetchInvites,
+  fetchReferralLevels,
   fetchOwnedTrucks,
   completeTask as apiCompleteTask,
   buyProduct as apiBuyProduct,
@@ -14,6 +15,7 @@ export const queryKeys = {
   products: ['products'] as const,
   tasks: ['tasks'] as const,
   invites: ['invites'] as const,
+  referralLevels: ['referralLevels'] as const,
   ownedTrucks: ['ownedTrucks'] as const,
 }
 
@@ -31,6 +33,10 @@ export function useTasks() {
 
 export function useInvites() {
   return useQuery({ queryKey: queryKeys.invites, queryFn: fetchInvites })
+}
+
+export function useReferralLevels() {
+  return useQuery({ queryKey: queryKeys.referralLevels, queryFn: fetchReferralLevels })
 }
 
 export function useOwnedTrucks() {

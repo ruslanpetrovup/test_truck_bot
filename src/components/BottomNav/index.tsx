@@ -7,7 +7,7 @@ import styles from './style.module.scss'
 const navItems: { to: string | null; label: string; icon: IconName; openWallet?: boolean; activePaths?: string[] }[] = [
   { to: '/main', label: 'Main', icon: 'main' },
   { to: '/trucks/shop', label: 'Trucks', icon: 'truck', activePaths: ['/trucks'] },
-  { to: '/referrals', label: 'Referrals', icon: 'users' },
+  { to: '/referrals', label: 'Referrals', icon: 'referrals' },
   { to: '/missions', label: 'Missions', icon: 'tasks' },
   { to: null, label: 'Wallet', icon: 'wallet', openWallet: true },
 ]

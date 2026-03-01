@@ -62,10 +62,31 @@ h6 {
   overflow-wrap: break-word;
 }
 
-/* Proxima Nova — файлы в public/fonts/ */
+/* Proxima Nova — public/fonts/ */
+$fontPath: '/fonts';
+
 @font-face {
   font-family: 'Proxima Nova';
-  src: url('/fonts/ProximaNova-Regular.woff') format('woff');
+  src: url('#{$fontPath}/ProximaNovaT-Thin.woff2') format('woff2'),
+       url('#{$fontPath}/ProximaNovaT-Thin.woff') format('woff');
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Proxima Nova';
+  src: url('#{$fontPath}/ProximaNova-Light.woff2') format('woff2'),
+       url('#{$fontPath}/ProximaNova-Light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Proxima Nova';
+  src: url('#{$fontPath}/ProximaNova-Regular.woff2') format('woff2'),
+       url('#{$fontPath}/ProximaNova-Regular.woff') format('woff');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -73,7 +94,17 @@ h6 {
 
 @font-face {
   font-family: 'Proxima Nova';
-  src: url('/fonts/ProximaNova-Bold.woff') format('woff');
+  src: url('#{$fontPath}/ProximaNova-RegularIt.woff2') format('woff2'),
+       url('#{$fontPath}/ProximaNova-RegularIt.woff') format('woff');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Proxima Nova';
+  src: url('#{$fontPath}/ProximaNova-Semibold.woff2') format('woff2'),
+       url('#{$fontPath}/ProximaNova-Semibold.woff') format('woff');
   font-weight: 600;
   font-style: normal;
   font-display: swap;
@@ -81,7 +112,17 @@ h6 {
 
 @font-face {
   font-family: 'Proxima Nova';
-  src: url('/fonts/ProximaNova-Bold.woff') format('woff');
+  src: url('#{$fontPath}/ProximaNova-SemiboldIt.woff2') format('woff2'),
+       url('#{$fontPath}/ProximaNova-SemiboldIt.woff') format('woff');
+  font-weight: 600;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Proxima Nova';
+  src: url('#{$fontPath}/ProximaNova-Bold.woff2') format('woff2'),
+       url('#{$fontPath}/ProximaNova-Bold.woff') format('woff');
   font-weight: 700;
   font-style: normal;
   font-display: swap;
@@ -89,9 +130,46 @@ h6 {
 
 @font-face {
   font-family: 'Proxima Nova';
-  src: url('/fonts/ProximaNova-Black.woff') format('woff');
+  src: url('#{$fontPath}/ProximaNova-BoldIt.woff2') format('woff2'),
+       url('#{$fontPath}/ProximaNova-BoldIt.woff') format('woff');
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Proxima Nova';
+  src: url('#{$fontPath}/ProximaNova-Extrabld.woff2') format('woff2'),
+       url('#{$fontPath}/ProximaNova-Extrabld.woff') format('woff');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Proxima Nova';
+  src: url('#{$fontPath}/ProximaNova-ExtrabldIt.woff2') format('woff2'),
+       url('#{$fontPath}/ProximaNova-ExtrabldIt.woff') format('woff');
+  font-weight: 800;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Proxima Nova';
+  src: url('#{$fontPath}/ProximaNova-Black.woff2') format('woff2'),
+       url('#{$fontPath}/ProximaNova-Black.woff') format('woff');
   font-weight: 900;
   font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Proxima Nova';
+  src: url('#{$fontPath}/ProximaNova-BlackIt.woff2') format('woff2'),
+       url('#{$fontPath}/ProximaNova-BlackIt.woff') format('woff');
+  font-weight: 900;
+  font-style: italic;
   font-display: swap;
 }
 
@@ -109,6 +187,9 @@ h6 {
   --surface-elevated: #36363d;
   --primary: #3b82f6;
   --primary-hover: #2563eb;
+  --stat-green: #22c55e;
+  --stat-blue: #3b82f6;
+  --stat-orange: #f97316;
   --max-mobile: 420px;
 }
 

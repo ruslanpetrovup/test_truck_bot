@@ -38,3 +38,9 @@ export interface Friend {
   avatarUrl: string
   reward: number
 }
+
+export interface ReferralLevel {
+  percent: number
+  level: number
+  referrals: Friend[]
+}
